@@ -3,18 +3,18 @@
       "id": 1,
       "id_usuario": 1,
       "fecha": "2025-04-10",
-      "total": 233000,
+      "total": 763.000,
       "direccion": "Av. Rafael Nuñez 456",
       "productos": [
         {
-          "id": 101,
+          "id": 1,
           "cantidad": 1,
-          "precio_unitario": 8000
+          "precio_unitario": 13000
         },
         {
-          "id": 102,
+          "id": 2,
           "cantidad": 1,
-          "precio_unitario": 225000
+          "precio_unitario": 750000
         }
       ]
     },
@@ -22,13 +22,13 @@
       "id": 2,
       "id_usuario": 2,
       "fecha": "2025-04-11",
-      "total": 750000,
+      "total": 450.000,
       "direccion": "Av. Recta Martinolli 789",
       "productos": [
         {
-          "id": 103,
-          "cantidad": 1,
-          "precio_unitario": 750000
+          "id": 3,
+          "cantidad": 2,
+          "precio_unitario": 450.000
         }
       ]
     }
