@@ -3,6 +3,7 @@
       "id": 1,
       "nombre": "Auriculares Bluetooth Sony",
       "desc": "Auriculares inalámbricos con cancelación de ruido",
+      "categoria": "Auriculares",
       "precio": 13000,
       "disponible": true,
       "imagen": "https://store.sony.com.ar/linkbuds-s/p"
@@ -11,6 +12,7 @@
       "id": 2,
       "nombre": "Notebook HP 15s",
       "desc": "Notebook con procesador Ryzen 5 y 8GB RAM",
+      "categoria": "Notebooks",
       "precio": 750000,
       "disponible": true,
       "imagen": "https://www.cordobanotebooks.com.ar/wp-content/uploads/2023/10/4W2K3UAABA-600x600.jpg.webp"
@@ -19,6 +21,7 @@
       "id": 3,
       "nombre": "Smartphone Samsung A54",
       "desc": "Teléfono con pantalla AMOLED de 6.5 pulgadas",
+      "categoria": "Telefonos",
       "precio": 225000,
       "disponible": true,
       "imagen": "https://samsungar.vtexassets.com/arquivos/ids/201086-800-auto?width=800&height=auto&aspect=true"
