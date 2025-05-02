@@ -3,6 +3,13 @@ const router = express.Router();
 const ventas = require('../data/ventas.json');
 const usuarios = require('../data/usuarios.json');
 const productos = require('../data/productos.json');
+const fs = require('fs');
+const path = require('path');
+const ventasPath = path.join(__dirname, '../data/ventas.json');
+
+function guardarVentas(data) {
+  fs.writeFileSync(ventasPath, JSON.stringify(data, null, 2));
+}
 
 router.get('/', (req, res) => {
   res.json(ventas);
@@ -35,7 +42,10 @@ router.post('/', (req, res) => {
     direccion,
     productos: productosValidos
   };
+
   ventas.push(nueva);
+  guardarVentas(ventas)
+  
   res.status(201).json(nueva);
 });
 
