@@ -34,10 +34,6 @@ router.post("/login", async (req, res) => {
   try {
     const usuario = await Usuario.findOne({ email });
     if (!usuario) return res.status(404).json({ mensaje: "Usuario no encontrado" });
-
-    console.log('password:', password);
-    console.log('usuario.password:', usuario.password);
-
     const valido = await bcrypt.compare(password, usuario.password);
     if (!valido) return res.status(401).json({ mensaje: "Contraseña incorrecta" });
 
