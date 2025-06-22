@@ -1,59 +1,71 @@
 const express = require('express');
 const router = express.Router();
-const ventas = require('../data/ventas.json');
-const usuarios = require('../data/usuarios.json');
-const productos = require('../data/productos.json');
-const fs = require('fs');
-const path = require('path');
-const ventasPath = path.join(__dirname, '../data/ventas.json');
+const Venta = require('../models/Venta');
+const Usuario = require('../models/Usuario');
+const Producto = require('../models/Producto');
+const mongoose = require('mongoose');
+const verificarToken = require("../auth")
 
-function guardarVentas(data) {
-  fs.writeFileSync(ventasPath, JSON.stringify(data, null, 2));
-}
-
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+  const ventas = await Venta.find();
   res.json(ventas);
 });
 
-router.get('/usuario/:id', (req, res) => {
-  const resultado = ventas.filter(v => v.id_usuario === parseInt(req.params.id));
-  res.json(resultado);
+router.get('/usuario/:id', async (req, res) => {
+  try {
+    const idUsuario = new mongoose.Types.ObjectId(req.params.id);
+    const ventas = await Venta.find({ id_usuario: idUsuario })
+      .populate('productos.id');
+    res.json(ventas);
+  } catch (error) {
+    res.status(400).json({ mensaje: 'ID de usuario inválido' });
+  }
 });
 
-router.post('/', (req, res) => {
-  const { id_usuario, fecha, direccion, productos: items } = req.body;
+router.post('/', verificarToken, async (req, res) => {
+  try {
+    const { id_usuario, fecha, direccion, productos: items } = req.body;
 
-  const user = usuarios.find(u => u.id === id_usuario);
-  if (!user) return res.status(400).json({ mensaje: 'Usuario no válido' });
+    const usuarioExiste = await Usuario.findById(id_usuario);
+    if (!usuarioExiste) return res.status(400).json({ mensaje: 'Usuario no válido' });
 
-  let total = 0;
-  const productosValidos = items.map(item => {
-    const prod = productos.find(p => p.id === item.id);
-    if (!prod) throw new Error('Producto no válido');
-    total += item.precio_unitario * item.cantidad;
-    return item;
-  });
+    let total = 0;
+    const productosValidados = await Promise.all(
+      items.map(async (item) => {
+        const producto = await Producto.findById(item.id);
+        if (!producto) throw new Error('Producto no válido');
+        total += item.precio_unitario * item.cantidad;
+        return {
+          id: producto._id,
+          cantidad: item.cantidad,
+          precio_unitario: item.precio_unitario,
+        };
+      })
+    );
 
-  const nueva = {
-    id: ventas.length + 1,
-    id_usuario,
-    fecha,
-    total,
-    direccion,
-    productos: productosValidos
-  };
+    const nuevaVenta = new Venta({
+      id_usuario,
+      fecha,
+      direccion,
+      productos: productosValidados,
+      total,
+    });
 
-  ventas.push(nueva);
-  guardarVentas(ventas)
-  
-  res.status(201).json(nueva);
+    await nuevaVenta.save();
+    res.status(201).json(nuevaVenta);
+  } catch (error) {
+    res.status(400).json({ mensaje: error.message });
+  }
 });
 
-router.put('/:id', (req, res) => {
-  const index = ventas.findIndex(v => v.id === parseInt(req.params.id));
-  if (index === -1) return res.status(404).json({ mensaje: 'Venta no encontrada' });
-  ventas[index] = { ...ventas[index], ...req.body };
-  res.json(ventas[index]);
+router.put('/:id', async (req, res) => {
+  try {
+    const ventaActualizada = await Venta.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!ventaActualizada) return res.status(404).json({ mensaje: 'Venta no encontrada' });
+    res.json(ventaActualizada);
+  } catch (error) {
+    res.status(400).json({ mensaje: 'ID inválido o error de actualización' });
+  }
 });
 
 module.exports = router;
