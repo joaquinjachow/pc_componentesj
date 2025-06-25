@@ -12,14 +12,13 @@ export function guardarCarrito(carrito) {
     }
 }
 
-export function agregarAlCarrito(producto) {
+export function agregarAlCarrito(producto, cantidad = 1) {
     const carrito = obtenerCarrito();
-    const index = carrito.findIndex(p => p.id === producto.id);
+    const index = carrito.findIndex(p => p._id === producto._id);
     if (index !== -1) {
-        carrito[index].cantidad += 1;
+        carrito[index].cantidad += cantidad;
     } else {
-        carrito.push({ ...producto, cantidad: 1 });
+        carrito.push({ ...producto, cantidad });
     }
     guardarCarrito(carrito);
-    alert(`${producto.nombre} agregado al carrito`);
-}  
+}
