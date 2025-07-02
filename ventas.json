@@ -1,0 +1,83 @@
+[
+  {
+    "_id": "682a4ea000e8a64d1c5001b6",
+    "id_usuario": "0000000100e8a64d1c5001aa",
+    "fecha": "2025-04-10",
+    "direccion": "Av. Rafael Nuñez 456",
+    "total": 763,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "682a4ea000e8a64d1c5001b9",
+    "id_usuario": "0000000200e8a64d1c5001ad",
+    "fecha": "2025-04-11",
+    "direccion": "Av. Recta Martinolli 789",
+    "total": 450,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "682a4ea000e8a64d1c5001bb",
+    "id_usuario": "0000000100e8a64d1c5001af",
+    "fecha": "2025-05-02",
+    "direccion": "Calle Falsa 123",
+    "total": 988000,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "682a4ea000e8a64d1c5001bf",
+    "id_usuario": "0000000100e8a64d1c5001b3",
+    "fecha": "2025-05-02",
+    "direccion": "Calle Falsa 123",
+    "total": 238000,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "6851b41647ea2b1b59153d30",
+    "id_usuario": "683dc43f14412550e4cd75c5",
+    "fecha": "2025-06-17",
+    "direccion": "Pettoruti",
+    "total": 750000,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "6851b4f7102bbf379baaa5b8",
+    "id_usuario": "683dc43f14412550e4cd75c5",
+    "fecha": "2025-06-17",
+    "direccion": "Nuñez",
+    "total": 13000,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "6851be23102bbf379baaa5df",
+    "id_usuario": "683dc43f14412550e4cd75c5",
+    "fecha": "2025-06-17",
+    "direccion": "Petoruti",
+    "total": 750000,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "685eff5e5049a2c54ee1f0ae",
+    "id_usuario": "683dc43f14412550e4cd75c5",
+    "fecha": "2025-06-27",
+    "direccion": "Av Colon 5110",
+    "total": 750000,
+    "productos": [],
+    "__v": 0
+  },
+  {
+    "_id": "685f17f6d1ae3a8c7de200aa",
+    "id_usuario": "683dc43f14412550e4cd75c5",
+    "fecha": "2025-06-27",
+    "direccion": "Av colon 1110",
+    "total": 13000,
+    "productos": [],
+    "__v": 0
+  }
+]

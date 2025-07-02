@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "682a4d9c5b27c0239970cea9",
+    "nombre": "Juan Carlos",
+    "apellido": "Pérez",
+    "email": "juan.carlos@example.com",
+    "password": "$2b$10$q1wDC3K3e6U8Dnr0safRu..lU2mkVmZlIszlzczQIaSnwfV7hCxue",
+    "__v": 0
+  },
+  {
+    "_id": "682a4d9c5b27c0239970ceaa",
+    "nombre": "Lucía",
+    "apellido": "González",
+    "email": "lucia.gonzalez@hotmail.com",
+    "password": "$2b$10$FE9wQcarWc4g1A2r0YsnneUtBsJGHB377iPrElLRC2NOVwogKb8Ky",
+    "__v": 0
+  },
+  {
+    "_id": "682a4d9c5b27c0239970ceab",
+    "nombre": "Martín",
+    "apellido": "Pérez",
+    "email": "martin.perez@yahoo.com",
+    "password": "$2b$10$BulP07VJNVx37kuI2VTsG.rZFLfPca1moxNTuFXnl6x8ihkKfRTI6",
+    "__v": 0
+  },
+  {
+    "_id": "682cb7e5a70fc7aa56eef9fd",
+    "nombre": "Joaquin",
+    "apellido": "dev",
+    "email": "joacodev1@hotmail.com",
+    "password": "$2b$10$K2bzRMgOp/5S9f/NSYf.6O4cLLQ.M9Glbt5QcFwym.ojKgsLWZR5e",
+    "__v": 0
+  },
+  {
+    "_id": "683dc43f14412550e4cd75c5",
+    "nombre": "Joaquin",
+    "apellido": "Jachow",
+    "email": "joacojachow@hotmail.com",
+    "password": "$2b$10$kPccqOQGIIfjt8Wv0xPkoOeB6kNpJf1iELiyX6TPc89nHk5BfzKfW",
+    "__v": 0
+  },
+  {
+    "_id": "6851ad116dc177723f18fd24",
+    "nombre": "JJ",
+    "apellido": "DEV",
+    "email": "Jdev@hotmail.com",
+    "password": "$2b$10$E/WmN5rXF1Wssu2ozUYO9uu2J09cObky7xhMMSb7Fhb37H5Ss4G8.",
+    "__v": 0
+  },
+  {
+    "_id": "6851ad3e6dc177723f18fd27",
+    "nombre": "a",
+    "apellido": "a",
+    "email": "a@dev.com",
+    "password": "$2b$10$3p9MsCh86lpIidhX4d5EA.TYh3aAVKwI0KzVHWudvmpWOK9FD.0YO",
+    "__v": 0
+  },
+  {
+    "_id": "6851ad6c6dc177723f18fd30",
+    "nombre": "e",
+    "apellido": "e",
+    "email": "e@e.com",
+    "password": "$2b$10$QrRXqUTxZMLuJOkAl6q1.ekTbVLrbCiDVTrhdDbky6tGauoRymwmW",
+    "__v": 0
+  },
+  {
+    "_id": "6851ad936dc177723f18fd34",
+    "nombre": "u",
+    "apellido": "u",
+    "email": "u@e.com",
+    "password": "$2b$10$9hyrMn38/7AOEGVspXJMIuEEScDTVD5db7BwRNyzSNj9DMCIYWMcC",
+    "__v": 0
+  },
+  {
+    "_id": "685eff075049a2c54ee1f085",
+    "nombre": "Pepe",
+    "apellido": "dev",
+    "email": "pepedev1@gmail.com",
+    "password": "$2b$10$SDPwrum2WONAwx1j8HkpRuBKKS4x6KMJ/TBjJfAjU1176KL9gWv2.",
+    "__v": 0
+  },
+  {
+    "_id": "685f1683d1ae3a8c7de20089",
+    "nombre": "Juan",
+    "apellido": "Dev",
+    "email": "juandev@gmail.com",
+    "password": "$2b$10$opKTeA5jpzXbBI18qg7MRe3mlGCUneNI0M.ziPyUVWV4lfKPh4Ppq",
+    "__v": 0
+  }
+]

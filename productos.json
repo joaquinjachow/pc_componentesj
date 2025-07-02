@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "682a4d3c35fa3fb86a2d7595",
+    "nombre": "Smartphone Samsung A54",
+    "desc": "Teléfono con pantalla AMOLED de 6.5 pulgadas",
+    "categoria": "Telefonos",
+    "precio": 225000,
+    "disponible": true,
+    "imagen": "https://samsungar.vtexassets.com/arquivos/ids/205847/Samsung-120127461…",
+    "__v": 0
+  },
+  {
+    "_id": "682a4d3c35fa3fb86a2d7593",
+    "nombre": "Auriculares Bluetooth Sony aaa",
+    "desc": "Auriculares inalámbricos con cancelación de ruido",
+    "categoria": "Auriculares",
+    "precio": 13000,
+    "disponible": true,
+    "imagen": "https://arsonyb2c.vtexassets.com/arquivos/ids/360515-800-800?v=6379982…",
+    "__v": 0
+  },
+  {
+    "_id": "682a4d3c35fa3fb86a2d7594",
+    "nombre": "Notebook HP 15s",
+    "desc": "Notebook con procesador Ryzen 5 y 8GB RAM",
+    "categoria": "Notebooks",
+    "precio": 750000,
+    "disponible": true,
+    "imagen": "https://www.cordobanotebooks.com.ar/wp-content/uploads/2023/10/4W2K3UA…",
+    "__v": 0
+  }
+]
