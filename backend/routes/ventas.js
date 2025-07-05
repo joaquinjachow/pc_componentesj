@@ -25,10 +25,8 @@ router.get('/usuario/:id', async (req, res) => {
 router.post('/', verificarToken, async (req, res) => {
   try {
     const { id_usuario, fecha, direccion, productos: items } = req.body;
-
     const usuarioExiste = await Usuario.findById(id_usuario);
     if (!usuarioExiste) return res.status(400).json({ mensaje: 'Usuario no válido' });
-
     let total = 0;
     const productosValidados = await Promise.all(
       items.map(async (item) => {
@@ -42,7 +40,6 @@ router.post('/', verificarToken, async (req, res) => {
         };
       })
     );
-
     const nuevaVenta = new Venta({
       id_usuario,
       fecha,
@@ -50,7 +47,6 @@ router.post('/', verificarToken, async (req, res) => {
       productos: productosValidados,
       total,
     });
-
     await nuevaVenta.save();
     res.status(201).json(nuevaVenta);
   } catch (error) {
