@@ -46,7 +46,6 @@ router.delete('/:id', async (req, res) => {
   if (tieneVentas) {
     return res.status(400).json({ mensaje: 'No se puede eliminar el usuario con ventas asociadas' });
   }
-
   const eliminado = await Usuario.findByIdAndDelete(usuarioId);
   if (!eliminado) return res.status(404).json({ mensaje: 'Usuario no encontrado' });
   res.json({ mensaje: 'Usuario eliminado correctamente' });
