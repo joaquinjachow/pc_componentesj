@@ -59,10 +59,9 @@ export default function Carrito() {
     if (res.ok) {
       toast.success('Compra realizada con éxito');
 
-    const mensaje = encodeURIComponent(`Hola! Esta es mi orden:\n\n${
-      carrito.map(p => `• ${p.nombre} x${p.cantidad} - $${p.precio}`).join('\n')
-      }\n\nTotal: $${carrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0)}\nDirección: ${direccion}`);
-      
+      const mensaje = encodeURIComponent(`Hola! Esta es mi orden:\n\n${carrito.map(p => `• ${p.nombre} x${p.cantidad} - $${p.precio}`).join('\n')
+        }\n\nTotal: $${carrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0)}\nDirección: ${direccion}`);
+
       const whatsappURL = `https://wa.me/${celular}?text=${mensaje}`;
       window.open(whatsappURL, '_blank');
 
