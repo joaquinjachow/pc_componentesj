@@ -26,7 +26,7 @@ router.post('/disponibles', async (req, res) => {
   res.json(disponibles);
 });
 
-router.put('/:id', async  (req, res) => {
+router.put('/:id', async (req, res) => {
   const actualizado = await Producto.findByIdAndUpdate(req.params.id, req.body, { new: true });
   if (!actualizado) return res.status(404).json({ mensaje: 'Producto no encontrado' });
   res.json(actualizado);
